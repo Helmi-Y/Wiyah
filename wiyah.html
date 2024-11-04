@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiyah ❤</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Collage background container -->
+    <div class="collage-container">
+        <div class="collage-cell"></div>
+        <div class="collage-cell"></div>
+        <div class="collage-cell"></div>
+        <div class="collage-cell"></div>
+        <div class="collage-cell"></div>
+        <div class="collage-cell"></div>
+        <div class="collage-cell"></div>
+        <div class="collage-cell"></div>
+        <div class="collage-cell"></div>
+    </div>
+
+    <!-- Main content container -->
+    <div class="container">
+        <h1>Hey Wiyah ❤</h1>
+        <p><b> I know I can be busy, and I am sorry for that. <br>
+        In the meantime, tell me how you're currently feeling and I will try to make you feel better baby. <br>
+        I love you so much ♥</b></p>
+        <select id="feelingSelect">
+            <option value="" disabled selected>How do you feel?</option>
+            <option value="happy">You happy :)</option>
+            <option value="sad">You sad :(</option>
+            <option value="stressed">You stressed</option>
+            <option value="excited">You excited!</option>
+            <option value="unsure">You are unsure about things</option>
+            <option value="miss">You miss me</option>
+            <option value="laugh">You need a laugh</option>
+            <option value="mad">You mad at me</option>
+            <option value="love">How much I love you</option>
+            <option value="sick">You feeling sick</option>
+        </select>
+        <button onclick="displayMessage()"><b>Show Message </b></button>
+        <p id="messageDisplay" class="message"></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

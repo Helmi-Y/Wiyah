@@ -1,0 +1,78 @@
+/* Existing styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevents scrolling */
+    background-color: #670101;
+}
+
+.container {
+    width: 80%; /* Adjust width as desired */
+    max-width: 600px; /* Set a maximum width for larger screens */
+    text-align: center;
+    padding: 20px;
+    background: rgb(224, 130, 130);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Brings container above collage */
+    margin: 0 auto
+}
+
+h1 {
+    color: #670101;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+select, button {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #670101;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e03b3b;
+}
+
+.collage-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    z-index: 0; /* Ensure this stays behind the main content */
+}
+
+.collage-cell {
+    background-size: cover;
+    background-position: center;
+    animation: fadeCycle 10s infinite; /* Syncs with JS timing */
+    width: 100%; /* Ensure full width of the grid cell */
+    height: 100%; /* Ensure full height of the grid cell */
+    overflow: hidden; /* Hide any overflow from the images */
+}
+
+/* Updated animation: fade out at 50% */
+@keyframes fadeCycle {
+    0%, 40% { opacity: 1; }
+    50%, 60% { opacity: 0; } /* Fade out in the middle */
+    100% { opacity: 1; }
+}
